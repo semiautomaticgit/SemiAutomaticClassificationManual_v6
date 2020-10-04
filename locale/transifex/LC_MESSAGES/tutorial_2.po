@@ -1,0 +1,538 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2012-2018, Luca Congedo
+# This file is distributed under the same license as the Semi-Automatic
+# Classification Plugin package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Semi-Automatic Classification Plugin 6.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-09-09 23:52+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+
+#: ../../tutorial_2.rst:5
+msgid "Tutorial 2"
+msgstr ""
+
+#: ../../tutorial_2.rst:224
+msgid ""
+"The following is a tutorial about the functions of the Semi-Automatic "
+"Classification Plugin (:guilabel:`SCP`). It is assumed that you have a "
+"basic knowledge of QGIS."
+msgstr ""
+
+#: ../../tutorial_2.rst:235
+msgid "Tutorial 2: Cloud Masking, Image Mosaic, and Land Cover Change Location"
+msgstr ""
+
+#: ../../tutorial_2.rst:237
+msgid ""
+"This tutorial is about the use of :guilabel:`SCP` for the assessment of "
+"land cover change of a multispectral image. It is recommended to complete"
+" the :ref:`tutorial_1` before this tutorial."
+msgstr ""
+
+#: ../../tutorial_2.rst:240
+msgid ""
+"The purpose of this tutorial is to locate land cover change over one year"
+" (between 2017 and 2018), using free Sentinel-2 images."
+msgstr ""
+
+#: ../../tutorial_2.rst:246
+msgid ":guilabel:`Workflow`"
+msgstr ""
+
+#: ../../tutorial_2.rst:248
+msgid "Following the video of this tutorial."
+msgstr ""
+
+#: ../../tutorial_2.rst:254
+msgid "http://www.youtube.com/watch?v=xm9s97GPs0Y"
+msgstr ""
+
+#: ../../tutorial_2.rst:260
+msgid "Download the Data"
+msgstr ""
+
+#: ../../tutorial_2.rst:262
+msgid ""
+"We are going to download a :ref:`Sentinel2_definition` image (`Copernicus"
+" <http://copernicus.eu/>`_ land monitoring services) and use the bands "
+"illustrated in the following table."
+msgstr ""
+
+#: ../../tutorial_2.rst:266
+msgid "Sentinel-2 Bands"
+msgstr ""
+
+#: ../../tutorial_2.rst:266
+msgid "Central Wavelength  [micrometers]"
+msgstr ""
+
+#: ../../tutorial_2.rst:266
+msgid "Resolution [meters]"
+msgstr ""
+
+#: ../../tutorial_2.rst:268
+msgid "Band 2 - Blue"
+msgstr ""
+
+#: ../../tutorial_2.rst:268
+msgid "0.490"
+msgstr ""
+
+#: ../../tutorial_2.rst:268 ../../tutorial_2.rst:270 ../../tutorial_2.rst:272
+#: ../../tutorial_2.rst:280
+msgid "10"
+msgstr ""
+
+#: ../../tutorial_2.rst:270
+msgid "Band 3 - Green"
+msgstr ""
+
+#: ../../tutorial_2.rst:270
+msgid "0.560"
+msgstr ""
+
+#: ../../tutorial_2.rst:272
+msgid "Band 4 - Red"
+msgstr ""
+
+#: ../../tutorial_2.rst:272
+msgid "0.665"
+msgstr ""
+
+#: ../../tutorial_2.rst:274
+msgid "Band 5 - Vegetation Red Edge"
+msgstr ""
+
+#: ../../tutorial_2.rst:274
+msgid "0.705"
+msgstr ""
+
+#: ../../tutorial_2.rst:274 ../../tutorial_2.rst:276 ../../tutorial_2.rst:278
+#: ../../tutorial_2.rst:282 ../../tutorial_2.rst:284 ../../tutorial_2.rst:286
+msgid "20"
+msgstr ""
+
+#: ../../tutorial_2.rst:276
+msgid "Band 6 - Vegetation Red Edge"
+msgstr ""
+
+#: ../../tutorial_2.rst:276
+msgid "0.740"
+msgstr ""
+
+#: ../../tutorial_2.rst:278
+msgid "Band 7 - Vegetation Red Edge"
+msgstr ""
+
+#: ../../tutorial_2.rst:278
+msgid "0.783"
+msgstr ""
+
+#: ../../tutorial_2.rst:280
+msgid "Band 8 - NIR"
+msgstr ""
+
+#: ../../tutorial_2.rst:280
+msgid "0.842"
+msgstr ""
+
+#: ../../tutorial_2.rst:282
+msgid "Band 8A - Vegetation Red Edge"
+msgstr ""
+
+#: ../../tutorial_2.rst:282
+msgid "0.865"
+msgstr ""
+
+#: ../../tutorial_2.rst:284
+msgid "Band 11 - SWIR"
+msgstr ""
+
+#: ../../tutorial_2.rst:284
+msgid "1.610"
+msgstr ""
+
+#: ../../tutorial_2.rst:286
+msgid "Band 12 - SWIR"
+msgstr ""
+
+#: ../../tutorial_2.rst:286
+msgid "2.190"
+msgstr ""
+
+#: ../../tutorial_2.rst:290
+msgid ""
+"Start QGIS and the :guilabel:`SCP` . Open the tab :ref:`download_tab` "
+"clicking the button |download| in the :ref:`SCP_home`, or in the "
+":ref:`SCP_menu`. In the tab :ref:`download_tab` click the button "
+"|osm_add| to display the OpenStreetMap tiles (© `OpenStreetMap "
+"<http://www.openstreetmap.org/copyright>`_ contributors) in the QGIS map,"
+" licensed as CC BY-SA (`Tile Usage Policy "
+"<http://www.openstreetmap.org/copyright>`_ )."
+msgstr ""
+
+#: ../../tutorial_2.rst:294
+msgid ""
+"In general it is possible to define the area coordinates clicking the "
+"button |pointer| , then left click in the map for the UL point and right "
+"click in the map for the LR point. In this tutorial the study area is "
+"Rome (Italy), therefore click in the map to define the search area, or "
+"alternatively, enter these point coordinates in :ref:`search_parameters`:"
+msgstr ""
+
+#: ../../tutorial_2.rst:297
+msgid ":guilabel:`UL`: 12.4 / 41.9"
+msgstr ""
+
+#: ../../tutorial_2.rst:298
+msgid ":guilabel:`LR`: 12.5 / 41.8"
+msgstr ""
+
+#: ../../tutorial_2.rst:301
+msgid ""
+"The purpose of this tutorial is to map the land cover change between 2017"
+" and 2018, therefore we need to download at least two images. Because of "
+"cloud cover, we are going to download an additional image for 2016, which"
+" will be used to replace pixels covered by clouds in the first image. We "
+"are searching for three images (tile 33TTG) acquired on:"
+msgstr ""
+
+#: ../../tutorial_2.rst:305
+msgid "01 January 2017"
+msgstr ""
+
+#: ../../tutorial_2.rst:306
+msgid "10 February 2017"
+msgstr ""
+
+#: ../../tutorial_2.rst:307
+msgid "10 February 2018"
+msgstr ""
+
+#: ../../tutorial_2.rst:309
+msgid ""
+"Therefore, we need to perform three searches. Select "
+":guilabel:`Sentinel-2` from the :guilabel:`Products` |input_list| and "
+"set:"
+msgstr ""
+
+#: ../../tutorial_2.rst:312
+msgid ":guilabel:`Date from`: 2017-01-01"
+msgstr ""
+
+#: ../../tutorial_2.rst:313
+msgid ":guilabel:`to`: 2017-01-01"
+msgstr ""
+
+#: ../../tutorial_2.rst:315
+msgid ""
+"In this case, enter ``L1C_T33TTG`` in :guilabel:`Filter` to filter the "
+"results only for the tile 33TTG."
+msgstr ""
+
+#: ../../tutorial_2.rst:321
+msgid ":guilabel:`Search products`"
+msgstr ""
+
+#: ../../tutorial_2.rst:323
+msgid ""
+"Now click the button :guilabel:`Find` |search_images| and after a few "
+"seconds the image will be listed in the :ref:`product_list`. Click the "
+"item in the table to display a preview that is useful for assessing the "
+"quality of the image and the cloud cover."
+msgstr ""
+
+#: ../../tutorial_2.rst:330
+msgid ":guilabel:`Search result`"
+msgstr ""
+
+#: ../../tutorial_2.rst:332
+msgid ""
+"Repeat the date definition and the search also for the 2017-02-10 image. "
+"You can notice that there are a few clouds over the area, therefore we "
+"are going to mosaic this image with the one acquired on 2017-01-01."
+msgstr ""
+
+#: ../../tutorial_2.rst:339
+msgid ":guilabel:`Search result of second image`"
+msgstr ""
+
+#: ../../tutorial_2.rst:341
+msgid "Finally, repeat the search for the 2018-02-10 image."
+msgstr ""
+
+#: ../../tutorial_2.rst:347
+msgid ":guilabel:`Search results`"
+msgstr ""
+
+#: ../../tutorial_2.rst:350
+msgid ""
+"We can also select the bands to be downloaded according to our purpose. "
+"In particular, select the tab :ref:`download_options` and check only the "
+"Sentinel-2 bands that will be used in this tutorial and the ancillary "
+"data."
+msgstr ""
+
+#: ../../tutorial_2.rst:357
+msgid ":guilabel:`Download options`"
+msgstr ""
+
+#: ../../tutorial_2.rst:359
+msgid ""
+"For the purpose of this tutorial, uncheck the option |checkbox| "
+":guilabel:`Only if preview in Layers` because we want to download and "
+"preprocess all the images listed in the table."
+msgstr ""
+
+#: ../../tutorial_2.rst:361
+msgid ""
+"Before starting the download we need to set the preprocessing options in "
+"the tab :ref:`sentinel2_tab` for preforming the :ref:`DOS1_correction`. "
+"Check the options |checkbox| :guilabel:`Apply DOS1 atmospheric "
+"correction` and |checkbox| :guilabel:`Add bands in a new Band set` to "
+"automatically create a :guilabel:`Band set` for each image."
+msgstr ""
+
+#: ../../tutorial_2.rst:368
+msgid ":guilabel:`Preprocessing options`"
+msgstr ""
+
+#: ../../tutorial_2.rst:370
+msgid ""
+"To start the image download, in the tab :ref:`download_tab` click the "
+"button :guilabel:`RUN` |run| and select a directory where bands are saved"
+" (a new directory will be created for each image). The download could "
+"last a few minutes according to your internet connection speed. The "
+"download progress is displayed in a bar."
+msgstr ""
+
+#: ../../tutorial_2.rst:374
+msgid ""
+"After the download, all the bands of all the Sentinel-2 images (© "
+"Copernicus Sentinel data 2018) are automatically loaded in the map. We "
+"can also display the RGB color composite of the :guilabel:`Band sets` "
+"clicking the list :guilabel:`RGB=` in the :ref:`working_toolbar`, and "
+"selecting the item ``3-2-1``."
+msgstr ""
+
+#: ../../tutorial_2.rst:381
+msgid ":guilabel:`Download of Sentinel-2 bands`"
+msgstr ""
+
+#: ../../tutorial_2.rst:386
+msgid "Create the cloud cover mask"
+msgstr ""
+
+#: ../../tutorial_2.rst:388
+msgid ""
+"Before the land cover change assessment, we need to remove cloud cover "
+"pixels in the image acquired on 2017-02-10. Of course we could perform "
+"the same process for all the other images."
+msgstr ""
+
+#: ../../tutorial_2.rst:391
+msgid ""
+"In QGIS, load the file ``MSK_CLOUDS_B00.gml`` that should be inside the "
+"directory ``L1C_T33TTG_A008556_20170210T100132_2017-02-10`` . This vector"
+" file represents most of the cloud cover in the image. In QGIS Layers "
+"Panel, left click the vector ``MSK_CLOUDS_B00 MaskFeature`` and select "
+"``Export > Save Feature as`` to save this gml file to shapefile (e.g. "
+"``clouds.shp``)."
+msgstr ""
+
+#: ../../tutorial_2.rst:395
+msgid ""
+"We can convert this vector file to raster using the tab "
+":ref:`vector_to_raster_tab`."
+msgstr ""
+
+#: ../../tutorial_2.rst:397
+msgid ""
+"Click the button |reload| to refresh the layer list, and select the "
+"vector ``clouds``. Check the |checkbox| :guilabel:`Use constant value` to"
+" set the raster value 1 for clouds. Also, in :guilabel:`Select the "
+"reference raster` select the name of a band. This will create a raster "
+"with the same size and aligned to the Sentinel-2 image. Finally click the"
+" button :guilabel:`RUN` |run| to create the mask."
+msgstr ""
+
+#: ../../tutorial_2.rst:407
+msgid ":guilabel:`Vector to raster mask`"
+msgstr ""
+
+#: ../../tutorial_2.rst:409
+msgid ""
+"We could also improve the mask by manually editing the pixel of the "
+"raster using the tool :ref:`edit_raster_tab` or creating a semi-automatic"
+" classification of clouds."
+msgstr ""
+
+#: ../../tutorial_2.rst:414
+msgid "Mask clouds in the Sentinel-2 image"
+msgstr ""
+
+#: ../../tutorial_2.rst:416
+msgid ""
+"We are going to mask all the pixels covered by clouds in all the bands "
+"composing the :guilabel:`Band set` of the image acquired on 2017-02-10."
+msgstr ""
+
+#: ../../tutorial_2.rst:418
+msgid ""
+"In the tab :ref:`cloud_masking_tab`, set the number of the 2017-02-10 "
+":guilabel:`Band set` in :guilabel:`Select input band set`. In "
+":guilabel:`Select the classification` we select the mask created at the "
+"previous step. Enter 1 in :guilabel:`Mask class values`. Finally, uncheck"
+" |checkbox| :guilabel:`Use buffer of pixel size` to speed up the masking "
+"process."
+msgstr ""
+
+#: ../../tutorial_2.rst:423 ../../tutorial_2.rst:490
+msgid ""
+"Now click the button :guilabel:`RUN` |run| to select the output directory"
+" and start the masking process."
+msgstr ""
+
+#: ../../tutorial_2.rst:429
+msgid ":guilabel:`Mask clouds`"
+msgstr ""
+
+#: ../../tutorial_2.rst:435
+msgid "Mosaic the Sentinel-2 images"
+msgstr ""
+
+#: ../../tutorial_2.rst:437
+msgid ""
+"We are going to mosaic the 2017 images in order to create a cloud free "
+"image to be used for land cover change."
+msgstr ""
+
+#: ../../tutorial_2.rst:439
+msgid ""
+"We use the image acquired on 2017-01-01 to fill the gaps in the "
+"2017-02-10 image. In the tab :ref:`band_set_tab`, add a new "
+":guilabel:`Band set` with the button |add_bandset| and add the masked "
+"bands."
+msgstr ""
+
+#: ../../tutorial_2.rst:446 ../../tutorial_2.rst:484
+msgid ":guilabel:`New Band set`"
+msgstr ""
+
+#: ../../tutorial_2.rst:448
+msgid "Now we can mosaic the 2017 images."
+msgstr ""
+
+#: ../../tutorial_2.rst:450
+msgid ""
+"In the tab :ref:`mosaic_of_bandsets`, in the :guilabel:`Band set list` "
+"enter the number of the 2017-02-10 masked :guilabel:`Band set`, followed "
+"by comma, followed by the number of the 2017-01-01 :guilabel:`Band set`. "
+"Now click the button :guilabel:`RUN` |run| to select the output directory"
+" and start the masking process."
+msgstr ""
+
+#: ../../tutorial_2.rst:457
+msgid ":guilabel:`Mosaic Band sets`"
+msgstr ""
+
+#: ../../tutorial_2.rst:459
+msgid ""
+"We could have used more than 2 :guilabel:`Band sets`. The process "
+"automatically mosaic the corresponding bands of the input :guilabel:`Band"
+" sets` filling the NoData gaps of the first :guilabel:`Band set` with the"
+" pixels of the following :guilabel:`Band sets`. The mosaic bands are "
+"automatically added to the map."
+msgstr ""
+
+#: ../../tutorial_2.rst:467
+msgid ":guilabel:`Mosaic of 2017 images`"
+msgstr ""
+
+#: ../../tutorial_2.rst:472
+msgid "Land cover change"
+msgstr ""
+
+#: ../../tutorial_2.rst:474
+msgid ""
+"We are going to automatically locate the land cover change between the "
+"image mosaic of 2017 and the 2018 image."
+msgstr ""
+
+#: ../../tutorial_2.rst:476
+msgid ""
+":guilabel:`SCP` includes a tool that allows for calculating the spectral "
+"distance between every corresponding pixel of two :guilabel:`Band sets`, "
+"and creating a raster of changes through a spectral distance threshold."
+msgstr ""
+
+#: ../../tutorial_2.rst:478
+msgid ""
+"In the tab :ref:`band_set_tab`, add a new :guilabel:`Band set` with the "
+"button |add_bandset| and add the mosaic bands."
+msgstr ""
+
+#: ../../tutorial_2.rst:486
+msgid ""
+"In the tab :ref:`spectral_distance_tab`, set the number of the 2017 "
+"mosaic :guilabel:`Band set` in :guilabel:`Select first input band set`, "
+"and set the number of the 2018 :guilabel:`Band set` in :guilabel:`Select "
+"second input band set`. In :guilabel:`Distance algorithm` check the "
+"|radiobutton| :guilabel:`Spectral Angle Mapping`. Check the |checkbox| "
+":guilabel:`Distance threshold` and set the value 10 that is the threshold"
+" used for creating the raster of changes."
+msgstr ""
+
+#: ../../tutorial_2.rst:496
+msgid ":guilabel:`Spectral distance`"
+msgstr ""
+
+#: ../../tutorial_2.rst:498
+msgid ""
+"After a while, the spectral distance raster and the raster of changes are"
+" added to the map"
+msgstr ""
+
+#: ../../tutorial_2.rst:504
+msgid ":guilabel:`Raster of changes`"
+msgstr ""
+
+#: ../../tutorial_2.rst:506
+msgid ""
+"This is an automatic method for locating land cover changes. We can see "
+"that most land cover changes are due to crop variations."
+msgstr ""
+
+#: ../../tutorial_2.rst:509
+msgid ""
+"For instance, this method could be useful to assess vegetation burnt area"
+" or forest logging. We could set a different threshold value for "
+"increasing or reducing the number of pixels identified as changes."
+msgstr ""
+
+#: ../../tutorial_2.rst:512
+msgid ""
+"Of course, in order to identify the type of land cover change we should "
+"identify the land cover classes of the images through photo-"
+"interpretation or with semi-automatic classification."
+msgstr ""
+
+#~ msgid ""
+#~ "This tutorial is about the use of"
+#~ " :guilabel:`SCP` for the assessment of "
+#~ "land cover change of a multispectral "
+#~ "image. It is recommended to complete "
+#~ "the :ref:`tutorial_2` before this tutorial."
+#~ msgstr ""
+
